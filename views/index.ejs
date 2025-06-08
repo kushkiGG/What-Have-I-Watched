@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+<head>
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>What Have I Watched</title>
+</head>
+<body>
+<div class="logo-container"><img class="logo" src="images/logo2.png" alt="logo"/></div>
+<div class="search-bar-container">
+    <form id="post-form" action="/post" method="POST">
+        <input class="search-bar" type="text" placeholder="Search" name="PName" required>
+        <input id="search-button" type="submit" value="Search">
+    </form>
+</div>
+
+<div class="info-container">
+    <h1 class="about">All About What Have I Watched</h1>
+    <div class="whatis">
+        <h2 class="whatis title">What is What Have I watched?</h2>
+        <p class="whatistext">'What Have I Watched?' is a website that allows you to search for TV shows, series and even movies you've watched and log that you have watched them. Additionally, this website also allows keeps a record of shows that may have caught your attention, so that you'll never forget to go back and watch them whenever you have the time! This was made using HTML, CSS, Node.js, Express.js as well as EJS. I also used the OMDb API to get the data regarding shows/movies in addition to using PostgreSQL to persist the data.</p>
+    </div>
+    <div class="why">
+        <h2 class="why title">Why is This Website Useful?</h2>
+        <p class="whytext">I'm sure I'm not the only only person out there that has friends that will recommend me a number of shows or movies to watch, and my default response to them will be: 'Yeah I'll watch that at some point' or 'I'll add it to my list of shows to watch', only to never end up watching them. (It's usually because I end up forgetting 99% of the time). This place allows me to keep track of those suggestions so I don't forget, in addition to tracking all of the things I have watched. </p>
+    </div>
+    <div class="easy">
+        <h2 class="easy title">Easy to Use</h2>
+        <p class="easytext">There's no need for unnecessary sign-ups, with 'What Have I Watched?' you can search for whatever show or movie you are looking for and go about your day afterwards! Very user friendly and very simple to use! Pages may take longer to load the more movies/shows you have added.</p>
+    </div>
+    <div class="conclusion">
+        <h2 class="conclusion title">Conclusion</h2>
+        <p class="conclusiontext">Maybe you're like me and you also forget about shows your friends try to get you to start, or you'd just like a place to keep track of everything you've been watching lately. Whatever the case is, you're in the right place! </p>
+    </div>
+</div>
+    
+
+    
+    
+</body>
+<footer>
+    <%- include("partials/footer.ejs") %>
+</footer>
+
+</html>

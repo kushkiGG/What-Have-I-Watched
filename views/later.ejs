@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Later</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+    <% if (shows.length == 0) { %>
+        <h1 class="title">There's nothing on your watch list. </h1>
+        <% } else { %>
+            <h1 class="title">Shows and Movies to watch later:</h1>
+            <div class="showlistcontainer">
+           <% for (var i = 0; i < shows.length; i++) { %>
+            <div class="showlist">
+                <img class="movieposter" src="<%= shows[i].Poster %>" alt="Show/Movie Poster" width="200px" height="300px"/>
+                <form action="/deletelater" method="post">
+                    <button type="submit" class="delete" name="DeleteShowName" value="<%= remove[i].id %>" style="margin-top: 10px">Remove</button>
+                  </form></div>
+            <% } %>
+        <% } %> 
+            </div>
+   
+</body>
+<footer>
+    <%- include("partials/footer.ejs") %>
+</footer>
+</html>

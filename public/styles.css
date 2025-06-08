@@ -1,0 +1,271 @@
+body
+{
+    background-color: rgb(236, 230, 230);
+    padding: 0;
+    margin: 0;
+}
+
+.header-container
+{
+    background-color: white;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(5, 0, 0, .125);
+}
+
+.header-button 
+{
+    margin-left: 25px;
+}
+
+.header-text
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: black;
+    opacity: 60%;
+}
+
+.logo-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.logo
+{
+    width: 400px;  
+    height: 200px;
+}
+
+.search-bar-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+    height: 5vh;
+}
+
+.search-bar
+{
+    width: 30vw;
+    height: 80%;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    opacity: 80%;
+    padding-left: 10px;
+}
+
+#search-button
+{
+    width: 100px;
+    height: 92%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.button
+{
+    width: 150px;
+    height: 92%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+
+}
+
+#watched-form , #later-form
+{
+    margin-bottom: 25px;
+}
+
+.info-container
+{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about 
+{
+    font-family: "Roboto", sans-serif;
+}
+
+.whatis , .why , .easy , .conclusion 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 25px;
+}
+
+.whatistext , .whytext , .easytext , .conclusiontext 
+{
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.movietext
+{
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+}
+
+.title
+{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-container
+{
+    background-color: rgb(105, 96, 96);
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+
+.footer-div
+{
+    margin: 0 25px 0 25px;
+}
+
+.contact
+{
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.link
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: white;
+    opacity: 80%;
+}
+
+.linkspacing
+{
+    margin-top: 10px;
+}
+
+.copyright-container
+{
+    display: flex;
+    justify-content: center;
+    text-align: end;
+    background-color: rgb(105, 96, 96);
+    margin:0;
+    padding:0;
+}
+
+.media
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.showlistcontainer
+{ 
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 10px 20px;
+    margin-bottom: 25px;
+}
+
+.showlist
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieposter
+{
+    width: 200px;
+    height: 300px;
+}
+
+
+@media (max-width: 1500px)
+{
+    .showlistcontainer
+    { 
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 10px 20px;
+        margin-bottom: 25px;
+    }
+    .movieposter
+    {
+      width: 200px;
+      height: 300px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .showlistcontainer
+    {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 10px 20px;
+        margin-bottom: 25px;
+    }
+    .movieposter
+    {
+      width: 100px;
+      height: 150px;
+    }
+
+    .links-container
+    {
+        margin-top: 25px;
+    }
+
+    .linkspacing
+    {
+        margin-top: 2px;
+    }
+
+}

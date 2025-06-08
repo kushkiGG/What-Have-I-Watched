@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs") %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= data.Title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+    <div class="media">
+        <h2 class="movie title"><%= data.Title %></h1>
+        <img src="<%= data.Poster %>" alt="Show/Movie Poster" width="300px" height="400px"/>
+        <p class="movietext"><em><%= data.Plot %></em></p>
+        <p class="movietext">Genre: <%= data.Genre %></p>
+        <p class="movietext">Rated: <%= data.Rated %></p>
+        <p class="movietext">IMDb: <%= data.imdbRating %></p>
+        <p class="movietext">Actors: <%= data.Actors %></p>
+        <p class="movietext">Date Released: <%= data.Released %></p>
+        <p class="movietext" style="margin-bottom: 25px;">Country: <%= data.Country %></p>
+        <form id="watched-form" action="/watched" method="POST">
+            <input id="search-button button" type="submit" value="Add to Watched">
+        </form>
+        <form id="later-form" action="/later" method="POST">
+            <input id="search-button button" type="submit" value="Add to Watch Later">
+        </form>
+    </div>
+</body>
+<footer>
+    <%- include("partials/footer.ejs") %>
+</footer>
+
+</html>
