@@ -8,11 +8,11 @@ import env from "dotenv";
 env.config();
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "movies",
-  password: "12345678",
-  port: "5432",
+  user: process.env.PG_USER,
+  host: process.env.PG_HOST,
+  database: process.env.PG_DATABASE,
+  password: process.env.PG_PASSWORD,
+  port: process.env.PG_PORT,
 });
 
 db.connect();
@@ -20,7 +20,7 @@ db.connect();
 const app = express();
 const port = 3000;
 
-const yourKey = "5170051c";
+const yourKey = process.env.PG_API_KEY;
 
 var countWatched = 0;
 var countLater = 0;
